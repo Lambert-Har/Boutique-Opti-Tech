@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to Bootstrap CSS file -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    <title>Contact</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    body {
+        font-family: 'Roboto', sans-serif;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /* CSS Navbar */
+    .navbar {
+        padding: 4px 50px;
+        margin: 0px 0px;
+        font-size: .90rem;
+        background-color: #ffd739;
+    }
+
+    nav img{
+        width:65px;
+    }
+
+    .navbar-toggler {
+        padding: .25rem .5rem;
+        font-size: 0.85rem;
+    }
+
+    .navbar-brand,
+    .navbar-collapse .navbar-nav .nav-link {
+        color: #000000;
+        position: relative;
+        text-decoration: none;
+        font-weight:500;
+    }
+
+    .navbar-brand::before,
+    .navbar-collapse .navbar-nav .nav-link::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        border-radius: 4px;
+        background-color: #18272F;
+        bottom: 0;
+        left: 0;
+        transform-origin: right;
+        transform: scaleX(0);
+        transition: transform .3s ease-in-out;
+    }
+
+    .navbar-brand:hover::before ,
+    .navbar-collapse .navbar-nav .nav-link:hover::before {
+        transform-origin: left;
+        transform: scaleX(0.500);  
+    } 
+
+    @media (min-width: 992px) {
+        .navbar-nav {
+            margin-left: 50px;
+        }
+        .opt {
+            margin-left: 15px;
+        }
+
+    }
+    
+    @media (max-width: 991px) {
+        .navbar-nav {
+            margin-left: 0; 
+        }
+    }
+
+    /* CSS Contact */
+    .contact-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-item {
+        margin-bottom: 10px;
+    }
+
+    .label {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    /* .container {
+        width: 100%;
+        max-width: 1200px; 
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    } */
+
+    /* CCS Map */
+    .map-container {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    /* Style for the map iframe */
+    .map-container iframe {
+        width: 100%;
+        height: 450px;
+        border: 0;
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light mb-4">
+        <img src="img/logo.png" alt="Logo" srcset="">
+        <h4 class="opt"><strong>Opti'Tech</strong></h4>
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="#">Accueil <span class="sr-only"></span></a>
+                <a class="nav-item nav-link" href="#">Service</a>
+                <a class="nav-item nav-link" href="#">Tarifs</a>
+                <a class="nav-item nav-link" href="#">Charte</a>
+                <a class="nav-item nav-link" href="#">Support</a>
+                <a class="nav-item nav-link active" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <h4 class="text-center mb-4">Contactez-nous à l'adresse suivante.</h4>
+
+    <div class="container mt-5">
+        <div class="contact-info mb-3">
+            <div class="info-item">
+                <span class="label">Téléphone :</span>
+                <span class="value">+330000000000</span>
+            </div>
+            <div class="info-item">
+                <span class="label">E-mail :</span>
+                <span class="value">Boutique@yyyy.fr</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Adresse :</span>
+                <span class="value">2 Rue Nermont, 28200 Châteaudun</span>
+            </div>
+        </div>
+
+
+        <p class="map-container">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1885.370328138731!2d1.327422739419395!3d48.06553754752961!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e37e551d574675%3A0xf7aa445e7588e8f!2sCampus%20%22Les%20Champs%20du%20Possible%22%20-%20Village%20by%20CA!5e0!3m2!1sfr!2sfr!4v1706025353469!5m2!1sfr!2sfr"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </p>
+    </div>
+
+    <!-- Link to jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Link to Bootstrap JS file -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
